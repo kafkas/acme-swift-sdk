@@ -15,7 +15,7 @@ public final class ServiceClient: Sendable {
         )
     }
 
-    public func downloadFile1(requestOptions: RequestOptions? = nil) async throws -> Data {
+    public func downloadFile(requestOptions: RequestOptions? = nil) async throws -> Data {
         return try await httpClient.performRequest(
             method: .post,
             path: "/download-file",
@@ -24,7 +24,7 @@ public final class ServiceClient: Sendable {
         )
     }
 
-    public func uploadFile(request: Data, requestOptions: RequestOptions? = nil) async throws -> String {
+    public func uploadFile2(request: Data, requestOptions: RequestOptions? = nil) async throws -> String {
         return try await httpClient.performRequest(
             method: .post,
             path: "/upload-file",
