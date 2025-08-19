@@ -24,7 +24,7 @@ public final class ServiceClient: Sendable {
         )
     }
 
-    public func uploadFile10(request: Data, requestOptions: RequestOptions? = nil) async throws -> String {
+    public func uploadFile(request: Data, requestOptions: RequestOptions? = nil) async throws -> String {
         return try await httpClient.performRequest(
             method: .post,
             path: "/upload-file",
